@@ -2,7 +2,6 @@ use actix_web::{web, App, HttpServer};
 use dotenv::dotenv;
 use crate::handlers::addUser::add_user;
 use tokio_postgres::NoTls;
-
 pub mod models;
 pub mod handlers;
 pub mod db;
