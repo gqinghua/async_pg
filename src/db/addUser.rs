@@ -2,6 +2,7 @@ use crate::{errors::errors::MyError};
 use deadpool_postgres::Client;
 use tokio_pg_mapper::FromTokioPostgresRow;
 use crate::models::models::User;
+use actix_web::Result;
 
 
 pub async fn add_user(client: &Client, user_info: User) -> Result<User, MyError> {

@@ -1,8 +1,9 @@
 use crate::{db::addUser};
-use actix_web::{web, Error, HttpResponse};
+use actix_web::{web, Error, HttpResponse, Result};
 use deadpool_postgres::{Client, Pool};
 use crate::models::models::User;
 use crate::{ errors::errors::MyError};
+
 pub async fn add_user(
     user: web::Json<User>,
     db_pool: web::Data<Pool>,
